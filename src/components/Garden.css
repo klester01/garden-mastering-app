@@ -3,7 +3,7 @@
   }
   
   .Garden-logo {
-    height: 40vmin;
+    height: 10vmin;
     pointer-events: none;
   }
   
@@ -35,5 +35,10 @@
     to {
       transform: rotate(360deg);
     }
+  }
+  #bungee {
+    font-family: "Bungee Shade", cursive;
+    font-size: 4.2;
+    padding: .5em 0em;
   }
   
