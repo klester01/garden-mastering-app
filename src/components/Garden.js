@@ -1,6 +1,8 @@
 import React from 'react';
 import './Garden.css';
 import logo from './images/trivia.jpeg';
+import { render } from '@testing-library/react';
+
 
 function Garden()
 {
@@ -17,3 +19,5 @@ function Garden()
     );
 }
 export default Garden;
+
+//api url for 10 questions https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple
