@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 window.onload = sendAPIRequest
 //Send request to API to fetch question
 
+=======
+import React from 'react';
+import './Trivia.css';
+
+//window.onload = sendAPIRequest
+//Send request to API to fetch question
+
+return Trivia()
+>>>>>>> master
 async function sendAPIRequest()
 {
     let response = await fetch('https://opentdb.com/api.php?amount=1&category=17&type=multiple');
@@ -57,3 +67,7 @@ correctButton.addEventListener('click', () =>
     sendAPIRequest()
 })
 
+<<<<<<< HEAD
+=======
+export default Trivia;
+>>>>>>> master
