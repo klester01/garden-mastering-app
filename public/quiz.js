@@ -1,19 +1,28 @@
-(function () {
-  var allQuestions = [{
-    question: "Which chemical element has the lowest boiling point?:",
-    options: ["Hydrogen", "Neon", "Nitrogen", "Helium"],
-    answer: 4
-  }, {
-    question: "What polymer is used to make CDs, safety goggles and riot shields?",
-    options: ["Nylon", "Bakelite", "Polycarbonate", "Rubber"],
-    answer: 3
-  }];
+window.onload = sendAPIRequest
+//import something
+async function sendAPIRequest()
+{
+  let response = await fetch('https://opentdb.com/api.php?amount=1&category=17&type=multiple');
+  console.log(response)
+  let data = await response.json()//waiting for promise
+
+  useApiData(data)
+}
+//function that does something with the data from API. Use {display the data in curly brackets}
+function useApiData(data)
+{
+  document.querySelector("#category").innerHTML = `Category: ${data.results[ 0 ].category}`
+  document.querySelector("#question1").innerHTML = `Question: ${data.results[ 0 ].question}`
+  document.querySelector("#answer1").innerHTML = data.results[ 0 ].correct_answer
+  document.querySelector("#answer2").innerHTML = data.results[ 0 ].incorrect_answers[ 0 ]
+  document.querySelector("#answer3").innerHTML = data.results[ 0 ].incorrect_answers[ 1 ]
+  document.querySelector("#answer4").innerHTML = data.results[ 0 ].incorrect_answers[ 2 ]
 
   var quesCounter = 0;
   var selectOptions = [];
   var quizSpace = $('#quiz');
 
-  nextQuestion();
+  /* nextQuestion();
 
   $('#next').click(function () {
     chooseOption();
@@ -30,14 +39,15 @@
     chooseOption();
     quesCounter--;
     nextQuestion();
-  });
-
-  function createElement(index) {
+  }); */
+  //Displaying questions
+  /* function createElement(index)
+  {
     var element = $('<div>', { id: 'question' });
     var header = $('<h2>Question No. ' + (index + 1) + ' :</h2>');
     element.append(header);
 
-    var question = $('<p>').append(allQuestions[index].question);
+    var question = $('<p>').append(allQuestions[ index ].question);
     element.append(question);
 
     var radio = radioButtons(index);
@@ -46,42 +56,52 @@
     return element;
   }
 
-  function radioButtons(index) {
+  function radioButtons(index)
+  {
     var radioItems = $('<ul>');
     var item;
     var input = '';
-    for (var i = 0; i < allQuestions[index].options.length; i++) {
+    for (var i = 0; i < allQuestions[ index ].options.length; i++)
+    {
       item = $('<li>');
       input = '<input type="radio" name="answer" value=' + i + ' />';
-      input += allQuestions[index].options[i];
+      input += allQuestions[ index ].options[ i ];
       item.append(input);
       radioItems.append(item);
     }
     return radioItems;
   }
 
-  function chooseOption() {
-    selectOptions[quesCounter] = +$('input[name="answer"]:checked').val();
+  function chooseOption()
+  {
+    selectOptions[ quesCounter ] = +$('input[name="answer"]:checked').val();
   }
 
-  function nextQuestion() {
-    quizSpace.fadeOut(function () {
+  function nextQuestion()
+  {
+    quizSpace.fadeOut(function ()
+    {
       $('#question').remove();
-      if (quesCounter < allQuestions.length) {
+      if (quesCounter < allQuestions.length)
+      {
         var nextQuestion = createElement(quesCounter);
         quizSpace.append(nextQuestion).fadeIn();
-        if (!(isNaN(selectOptions[quesCounter]))) {
-          $('input[value=' + selectOptions[quesCounter] + ']').prop('checked', true);
+        if (!(isNaN(selectOptions[ quesCounter ])))
+        {
+          $('input[value=' + selectOptions[ quesCounter ] + ']').prop('checked', true);
         }
-        if (quesCounter === 1) {
+        if (quesCounter === 1)
+        {
           $('#prev').show();
         }
-        else if (quesCounter === 0) {
+        else if (quesCounter === 0)
+        {
           $('#prev').hide();
           $('#next').show();
         }
       }
-      else {
+      else
+      {
         var scoreRslt = displayResult();
         quizSpace.append(scoreRslt).fadeIn();
         $('#next').hide();
@@ -90,15 +110,25 @@
     });
   }
 
-  function displayResult() {
+  function displayResult()
+  {
     var score = $('<p>', { id: 'question' });
     var correct = 0;
-    for (var i = 0; i < selectOptions.length; i++) {
-      if (selectOptions[i] === allQuestions[i].answer) {
+    for (var i = 0; i < selectOptions.length; i++)
+    {
+      if (selectOptions[ i ] === allQuestions[ i ].answer)
+      {
         correct++;
       }
     }
     score.append('You scored ' + correct + ' out of ' + allQuestions.length);
     return score;
-  }
-})();
+  } */
+
+}
+let correctButton = document.getElementById("answer1")//reprsents the location of the correct answer
+correctButton.addEventListener('click', () =>
+{
+  alert("CORRECT! You are on a roll")
+  sendAPIRequest()
+})
