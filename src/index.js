@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import Garden from './components/Garden'
+import Garden from './Garden'
 //import Timer from './components/Timer'
 //import Quiz from './components/Quiz'
 import * as serviceWorker from './serviceWorker';
