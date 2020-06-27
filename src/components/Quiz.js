@@ -6,7 +6,7 @@ class Quiz extends Component
     constructor(props)
     {
         super(props)
-        this.state = {}
+        this.state = { questions1: [] }
     }
     componentDidMount()
     {
