@@ -1,8 +1,7 @@
 import React from 'react';
 import './Garden.css';
 import logo from './images/trivia.jpeg';
-import { render } from '@testing-library/react';
-
+import Timer from './Timer';
 
 
 
@@ -13,9 +12,13 @@ function Garden()
             <header className="Garden-header">
                 <img src={logo} className="Garden-logo" alt="trivia" />
                 <div id="bungee">
+
                     <p>Welcome to Science and Nature Trivia App!!</p>
                     <p>Are you ready to test your knowledge?</p>
+                    <Timer />
+
                 </div>
+
             </header>
         </div>
     );
