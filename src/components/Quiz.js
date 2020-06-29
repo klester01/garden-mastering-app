@@ -9,9 +9,10 @@ class Quiz extends Component
         super(props)
         this.state = { questions1: [] }
     }; 
+    /*
     getQuestions = () => {
         axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple').then(function (response) {
-          console.log(response.data.results[0].question);
+          console.log(response.data.results[0].question);          
         });
         
         // .then(question => {
@@ -21,11 +22,29 @@ class Quiz extends Component
         //     // });
         // });
     }
-    componentDidMount() {
-        this.getQuestions();
-      }
-
-
+    */
+   componentDidMount() {
+    axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple')
+    .then(response => {
+      this.setState({ questions1: response.data.results[0] });
+      console.log(response.data)
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
+  render() {
+    const { questions1 } = this.state;
+    return (
+      <div className="container">
+        <h1>{questions1.question}</h1>
+        <button id="answer1">{questions1.incorrect_answers}</button>
+        <button id="answer2">{questions1.incorrect_answers}</button>
+        <button id="answer3">{questions1.incorrect_answers}</button>
+        <button id="answer1">{questions1.correct_answer}</button>
+      </div>
+    );
+  }
     /*
     {
         axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple').then(response =>
@@ -34,7 +53,7 @@ class Quiz extends Component
         })
     }
     */
-    
+   /* 
    render() {
     return (
       <div className="container">
@@ -43,8 +62,9 @@ class Quiz extends Component
       </div>
     )
   }
-
+  */
 }
+
 
 
 export default Quiz;
