@@ -24,4 +24,8 @@ function Garden() {
         </div>
     );
 }
+
+
 export default Garden;
+
+//api url for 10 questions https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple
