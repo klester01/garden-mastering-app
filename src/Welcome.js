@@ -1,6 +1,7 @@
 import React from 'react';
 import './Welcome.css';
 
+
 function Welcome() {
     return (
         <div className="Welcome">
@@ -14,10 +15,16 @@ function Welcome() {
                         <form>
                             <label id='username-input'>Username: </label>
                             <input type='text' id='fname' name='fname'></input>
-                            <input type="submit" value="Submit"></input>
+                            <input type="submit" id='submit-btn' value="Submit"></input>
                         </form>
                     </div>
-
+                    <div id='start-game-btn' onclick="window.location.href='./Garden.js';">
+                        <div class="box-1">
+                            <div class="btn btn-one">
+                                <span>Start Game</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </header>
