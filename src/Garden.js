@@ -6,16 +6,17 @@ import Quiz from './components/Quiz'
 
 
 
-function Garden() {
+function Garden()
+{
     return (
         <div className="Garden">
             <header className="Garden-header">
                 <img src={logo} className="Garden-logo" alt="trivia" />
                 <div id="bungee">
-                    
+
                     <p>Welcome to Science and Nature Trivia App!!</p>
                     <p>Are you ready to test your knowledge?</p>
-                    <Quiz />   
+                    <Quiz />
                     <Timer />
 
                 </div>
