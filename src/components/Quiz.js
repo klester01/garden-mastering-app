@@ -10,7 +10,6 @@ class Quiz extends Component
     super(props);
     this.state = { question: [] }
   }
-
   componentDidMount()
   {
     axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple')
@@ -31,17 +30,27 @@ class Quiz extends Component
     {
       return <Question question={question} />
     })
+
+    //const { incorrect_answers } = this.state.question;
+
+    const { incorrect_answers } = this.state.question.map((question) =>
+    {
+      return <Question question={question} />
+    })
+
     return (
 
       <div>
         <div className="Garden">  {/* // this.results[0].incorrect_answers[0] */}
-          <p>{this.props.question}</p>
+          {/*  <p>{this.props.question}</p> */}
           <p>{qca}</p>
+          <p>{incorrect_answers}</p>
         </div>
       </div>
     );
   }
 }
+
 export default Quiz;
 
 
