@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import Welcome from './Welcome'
+import Garden from './Garden'
 //import Timer from './components/Timer'
 //import Quiz from './components/Quiz'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Welcome />
+    <Garden />
   </React.StrictMode>,
   document.getElementById('root')
 );

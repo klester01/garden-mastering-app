@@ -17,7 +17,7 @@ function Garden() {
                     <p>Are you ready to test your knowledge?</p>
                     <Quiz />   
                     <Timer />
-
+                    
                 </div>
 
             </header>
