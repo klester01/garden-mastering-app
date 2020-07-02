@@ -57,7 +57,4 @@ correctButton.addEventListener('click', () =>
     sendAPIRequest()
 })
 
-<<<<<<< HEAD
-=======
 export default Trivia;
->>>>>>> master
