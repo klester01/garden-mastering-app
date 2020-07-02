@@ -18,9 +18,10 @@ function Welcome() {
                             <input type="submit" id='submit-btn' value="Submit"></input>
                         </form>
                     </div>
-                    <div id='start-game-btn' onclick="window.location.href='./Garden.js';">
+                    <div id='start-game-btn'>
                         <div class="box-1">
                             <div class="btn btn-one">
+                                <a href='https://garden-mastering-app-hw04giecw.vercel.app/Garden'></a>
                                 <span>Start Game</span>
                             </div>
                         </div>

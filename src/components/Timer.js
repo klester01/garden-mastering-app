@@ -35,10 +35,10 @@ class Timer extends Component
             this.setState(({
                 count: this.state.count - 1
             }))
-            // if (count < 0) {
-            //     clearInterval(Timer);
-            //     document.getElementById("timer").innerHTML = "Time is up!";
-            //   }
+            if (count < 0) {
+                clearInterval(Timer);
+                document.getElementById("timer").innerHTML = "Time is up!";
+              }
         }, 1000)
     }
     componentWillUnmount()
