@@ -41,8 +41,8 @@ class Quiz extends Component
         <button id="answer1">{questions1.incorrect_answers}</button>
         <button id="answer2">{questions1.incorrect_answers}</button>
         <button id="answer3">{questions1.incorrect_answers}</button>
-        <button id="answer1">{questions1.correct_answer}</button>
-      </div>
+        <button id="answer">{questions1.correct_answer}</button>
+      </div>  // this.results[0].incorrect_answers[0]
     );
   }
     /*
