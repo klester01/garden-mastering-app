@@ -10,19 +10,7 @@ class Quiz extends Component
     super(props);
     this.state = { question: [] }
   }
-<<<<<<< HEAD
-  render() {
-    const { questions1 } = this.state;
-    return (
-      <div className="container">
-        <h1>{questions1.question}</h1>
-        <button id="answer1">{questions1.incorrect_answers}</button>
-        <button id="answer2">{questions1.incorrect_answers}</button>
-        <button id="answer3">{questions1.incorrect_answers}</button>
-        <button id="answer">{questions1.correct_answer}</button>
-      </div>  // this.results[0].incorrect_answers[0]
-    );
-=======
+  
   componentDidMount()
   {
     axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple')
@@ -36,7 +24,6 @@ class Quiz extends Component
       {
         console.log(error);
       });
->>>>>>> master
   }
   render()
   {
