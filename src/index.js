@@ -3,16 +3,20 @@ import ReactDOM from 'react-dom';
 // import Garden from './Garden';
 import './index.css';
 //import App from './App';
-import Welcome from './Welcome'
+// import Usercheck from './UserCheck'
+
 
 //import Timer from './components/Timer'
 //import Quiz from './components/Quiz'
 import * as serviceWorker from './serviceWorker';
+import Usercheck from './components/Usercheck';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Router> */}
+    <Usercheck />
     {/* <Garden /> */}
-    <Welcome />
+    {/* </Router> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

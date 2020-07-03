@@ -14,8 +14,8 @@ function Garden()
                 <img src={logo} className="Garden-logo" alt="trivia" />
                 <div id="bungee">
 
-                    <p>Welcome to Science and Nature Trivia App!!</p>
-                    <p>Are you ready to test your knowledge?</p>
+                    {/* <p>Welcome to Science and Nature Trivia App!!</p>
+                    <p>Are you ready to test your knowledge?</p> */}
                     <Quiz />
                     <Timer />
                     
