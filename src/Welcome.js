@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Welcome.css';
+import Garden from './Garden'
+// import { Link } from 'react-router';
+import { Switch, Route } from 'react-router-dom';
+
 
 
 function Welcome() {
@@ -12,17 +16,19 @@ function Welcome() {
                     <h4 className="content-text">Are you ready to test your knowledge?</h4>
 
                     <div id='username'>
-                        <form>
+                        <form onSubmit 
                             <label id='username-input'>Username: </label>
                             <input type='text' id='fname' name='fname'></input>
                             <input type="submit" id='submit-btn' value="Submit"></input>
                         </form>
                     </div>
-                    <div id='start-game-btn' onclick="window.location.href='./Garden.js';">
+                    <div id='start-game-btn'>
                         <div class="box-1">
                             <div class="btn btn-one">
-                                <span>Start Game</span>
-                            </div>
+                                {/* <span>{<Garden />}</span>
+                                <Link to="/Garden">Start</Link> */}
+                                <Route path="/" component={Garden} exact/>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -32,3 +38,5 @@ function Welcome() {
     );
 }
 export default Welcome;
+
+// <Route path="/" component={Home} exact/>
