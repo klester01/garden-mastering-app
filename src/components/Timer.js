@@ -27,18 +27,16 @@ class Timer extends Component
     {
         this.myInterval = setInterval(() =>
         {
-            /* const { startCount } = this.props
-            this.setState({
-                count: startCount
-            }) */
+            if (this.state.count <= 0)
+            {
+                clearInterval(this.myInterval);
+                document.getElementById("timer").innerHTML = "Time is up!";
+            }
 
             this.setState(({
                 count: this.state.count - 1
             }))
-            if (count < 0) {
-                clearInterval(Timer);
-                document.getElementById("timer").innerHTML = "Time is up!";
-              }
+
         }, 1000)
     }
     componentWillUnmount()

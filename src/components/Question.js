@@ -12,7 +12,7 @@ export class Question extends Component
 
                 <div><p>A) <button><h2>{this.props.question.correct_answer}</h2></button></p></div>
 
-                <div><p>B) <button><h2>{this.props.question.incorrect_answers}</h2></button></p></div>
+                <div><p>B) <button><h2>{this.props.question.incorrect_answers[ 0 ]}</h2></button></p></div>
 
                 <div><p>C) <button><h2>{this.props.question.incorrect_answers[ 1 ]}</h2></button></p></div>
 
