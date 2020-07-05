@@ -3,11 +3,11 @@ import axios from 'axios';
 import Question from './Question'
 
 
-nextQuestionHandler= () => {
-  this.setState({
+// nextQuestionHandler= () => {
+//   this.setState({
     
-  })
-}
+//   })
+// }
 
 class Quiz extends Component
 {
@@ -20,7 +20,7 @@ class Quiz extends Component
   answer = () =>
   {
       alert("Correct!, You Are On A Roll!!");
-      nextQuestionHandler();
+      // nextQuestionHandler();
   }
   
   componentDidMount()

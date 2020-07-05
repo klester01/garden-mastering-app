@@ -8,7 +8,7 @@ export class Leaderboard extends Component {
             <div>
                 <h1>Gameboard</h1>
                 <span>{this.props.score}</span><br />
-                <span>Player 1: {this.props.player[0].name}</span><br />
+                <span>Player 1: {this.props.name}</span><br />
             </div>
         )
     }
