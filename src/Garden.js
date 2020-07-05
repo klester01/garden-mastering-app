@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Garden.css';
 import Timer from './components/Timer';
 import Quiz from './components/Quiz'
 import ScoreBoard from './components/ScoreBoard';
 import Leaderboard from './components/Leaderboard';
-
-
 
 function Garden()
 {
@@ -21,7 +19,7 @@ function Garden()
                     <ScoreBoard />
                     <Timer />
                     <Quiz />
- 
+
                 </div>
 
             </header>
@@ -33,3 +31,4 @@ function Garden()
 export default Garden;
 
 //api url for 10 questions https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple
+>>>>>>> master
