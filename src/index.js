@@ -52,11 +52,13 @@ const store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>
+
     {/* <Router> */}
     {/* <Usercheck /> */}
     <Provider store={store}>
     <Garden />
     </Provider>
+
     {/* </Router> */}
   </React.StrictMode>,
   document.getElementById('root')

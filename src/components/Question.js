@@ -10,13 +10,13 @@ export class Question extends Component
 
                 <div><h2>Question: {this.props.question.question}</h2></div>
 
-                <div><p>A) <button><h2>{this.props.question.correct_answer}</h2></button></p></div>
+                <div><p>A) <button onClick={correct}><h2>{this.props.question.correct_answer}</h2></button></p></div>
 
-                <div><p>B) <button><h2>{this.props.question.incorrect_answers[ 0 ]}</h2></button></p></div>
+                <div><p>B) <button onClick={wrong}><h2>{this.props.question.incorrect_answers[ 0 ]}</h2></button></p></div>
 
-                <div><p>C) <button><h2>{this.props.question.incorrect_answers[ 1 ]}</h2></button></p></div>
+                <div><p>C) <button onClick={wrong}><h2>{this.props.question.incorrect_answers[ 1 ]}</h2></button></p></div>
 
-                <div><p>D) <button><h2>{this.props.question.incorrect_answers[ 2 ]}</h2></button></p></div>
+                <div><p>D) <button onClick={wrong}><h2>{this.props.question.incorrect_answers[ 2 ]}</h2></button></p></div>
             </div>
 
         )
@@ -24,3 +24,5 @@ export class Question extends Component
 }
 
 export default Question
+
+

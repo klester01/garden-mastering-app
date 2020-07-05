@@ -3,13 +3,26 @@ import axios from 'axios';
 import Question from './Question'
 
 
+nextQuestionHandler= () => {
+  this.setState({
+    
+  })
+}
+
 class Quiz extends Component
 {
   constructor(props)
   {
     super(props);
+    this.answer = this.answer.bind(this)
     this.state = { question: [] }
   }
+  answer = () =>
+  {
+      alert("Correct!, You Are On A Roll!!");
+      nextQuestionHandler();
+  }
+  
   componentDidMount()
   {
     axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple')
@@ -38,6 +51,7 @@ class Quiz extends Component
       return <Question question={question} />
     })
 
+
     return (
 
       <div>
@@ -45,6 +59,7 @@ class Quiz extends Component
           {/*  <p>{this.props.question}</p> */}
           <p>{qca}</p>
           <p>{incorrect_answers}</p>
+          <button onClick={this.nextQuestionHandler}>Submit</button>
         </div>
       </div>
     );
