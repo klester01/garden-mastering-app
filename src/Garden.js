@@ -1,6 +1,5 @@
 import React from 'react';
 import './Garden.css';
-import logo from './components/images/trivia.jpeg';
 import Timer from './components/Timer';
 import Quiz from './components/Quiz'
 import ScoreBoard from './components/ScoreBoard';
@@ -13,7 +12,7 @@ function Garden()
     return (
         <div className="Garden">
             <header className="Garden-header">
-                <img src={logo} className="Garden-logo" alt="trivia" />
+                {/* <img src={logo} className="Garden-logo" alt="trivia" /> */}
                 <div id="bungee">
 
                     {/* <p>Welcome to Science and Nature Trivia App!!</p>
