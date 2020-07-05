@@ -3,6 +3,8 @@ import './Garden.css';
 import logo from './components/images/trivia.jpeg';
 import Timer from './components/Timer';
 import Quiz from './components/Quiz'
+import ScoreBoard from './components/ScoreBoard';
+import Leaderboard from './components/Leaderboard';
 
 
 
@@ -16,9 +18,11 @@ function Garden()
 
                     {/* <p>Welcome to Science and Nature Trivia App!!</p>
                     <p>Are you ready to test your knowledge?</p> */}
-                    <Quiz />
+                    <Leaderboard />
+                    <ScoreBoard />
                     <Timer />
-                    
+                    <Quiz />
+ 
                 </div>
 
             </header>

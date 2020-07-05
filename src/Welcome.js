@@ -14,8 +14,15 @@ function Welcome() {
                     
                     <h2 className="content-text">Welcome to Science and Nature Trivia App</h2>
                     <h4 className="content-text">Are you ready to test your knowledge?</h4>
-                    
-                   
+
+                    <div id='username'>
+                        <form onSubmit> 
+                            <label id='username-input'>Username: </label>
+                            <input type='text' id='fname' name='fname'></input>
+                            <input type="submit" id='submit-btn' value="Submit"></input>
+                        </form>
+                    </div>
+
                     <div id='start-game-btn'>
                         <div class="box-1">
                             <div class="btn btn-one">
