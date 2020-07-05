@@ -33,6 +33,7 @@ class Timer extends Component
                 document.getElementById("timer").innerHTML = "Time is up!";
             }
 
+
             this.setState(({
                 count: this.state.count - 1
             }))
