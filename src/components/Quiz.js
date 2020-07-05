@@ -8,12 +8,14 @@ class Quiz extends Component
     {
         super(props)
         this.state = { questions1: [] }
-    }; 
-    getQuestions = () => {
-        axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple').then(function (response) {
-          console.log(response.data.results[0].question);
+    };
+    getQuestions = () =>
+    {
+        axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple').then(function (response)
+        {
+            console.log(response.data.results[ 0 ].question);
         });
-        
+
         // .then(question => {
         //    // this.setState({
         //         // questions1: question
@@ -21,9 +23,10 @@ class Quiz extends Component
         //     // });
         // });
     }
-    componentDidMount() {
+    componentDidMount()
+    {
         this.getQuestions();
-      }
+    }
 
 
     /*
@@ -34,15 +37,16 @@ class Quiz extends Component
         })
     }
     */
-    
-   render() {
-    return (
-      <div className="container">
-          {this.state.questions1.length > 0 && this.state.questions1.map(({question, answers, 
-          correct, questionID}) => <h4>{question}</h4> )}
-      </div>
-    )
-  }
+
+    render()
+    {
+        return (
+            <div className="container">
+                {this.state.questions1.length > 0 && this.state.questions1.map(({ question, answers,
+                    correct, questionID }) => <h4>{question}</h4>)}
+            </div>
+        )
+    }
 
 }
 
@@ -68,36 +72,36 @@ class Quiz extends Component {
         return (
           <div className="container">
              <div className="title">Trivia</div>
-              {this.state.questionBank.length > 0 && this.state.questionBank.map(({question, answers, 
+              {this.state.questionBank.length > 0 && this.state.questionBank.map(({question, answers,
               correct, questionID}) => <h4>{question}</h4> )}
           </div>
         )
       }
-  
+
   }
   */
 
-  
-  /*
-  class Quiz extends Component
+
+/*
+class Quiz extends Component
 {
-    constructor(props)
-    {
-        super(props)
-        this.state = { questions1: [] }
-    }
-    componentDidMount()
-    {
-        axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple').then(response =>
-        {
-            this.setState({ question1: data.results[ 0 ].question })
-        })
-    }
-    render()
-    {
-        return ('something goes in here')
-        //add code here
-    }
+  constructor(props)
+  {
+      super(props)
+      this.state = { questions1: [] }
+  }
+  componentDidMount()
+  {
+      axios.get('https://opentdb.com/api.php?amount=1&category=17&type=multiple').then(response =>
+      {
+          this.setState({ question1: data.results[ 0 ].question })
+      })
+  }
+  render()
+  {
+      return ('something goes in here')
+      //add code here
+  }
 }
 export default Quiz;
 */
