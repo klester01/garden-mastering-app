@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Garden from './Garden';
+import Garden from './Garden';
 import './index.css';
 //import App from './App';
 // import Usercheck from './UserCheck'
@@ -13,6 +13,7 @@ import Usercheck from './components/Usercheck';
 
 ReactDOM.render(
   <React.StrictMode>
+
     {/* <Router> */}
     <Usercheck />
     {/* <Garden /> */}
