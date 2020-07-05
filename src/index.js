@@ -15,8 +15,8 @@ ReactDOM.render(
   <React.StrictMode>
 
     {/* <Router> */}
-    <Usercheck />
-    {/* <Garden /> */}
+    {/*<Usercheck /> */}
+    <Garden /> 
     {/* </Router> */}
   </React.StrictMode>,
   document.getElementById('root')
