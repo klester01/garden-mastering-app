@@ -33,18 +33,18 @@ class Quiz extends Component
           answers: [
             {
               text: response.data.correct_answer,
-              correct: true 
+              correct: true
             },
             {
-              text: response.data.results[0].incorrect_answers[0],
+              text: response.data.results[ 0 ].incorrect_answers[ 0 ],
               correct: false
             },
             {
-              text: response.data.results[0].incorrect_answers[1],
+              text: response.data.results[ 0 ].incorrect_answers[ 1 ],
               correct: false
             },
             {
-              text: response.data.results[0].incorrect_answers[2],
+              text: response.data.results[ 0 ].incorrect_answers[ 2 ],
               correct: false
             },
           ]
@@ -66,7 +66,7 @@ class Quiz extends Component
 
     const { incorrect_answers } = this.state.question.map((question) =>
     {
-      return <Question question={question} answers={question.answers}/>
+      return <Question question={question} answers={question.answers} />
     })
 
 
