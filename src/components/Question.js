@@ -22,7 +22,12 @@ var submit = 0
 // }
 
 export class Question extends Component
-{
+{   
+    answer_question(is_correct){
+        alert(is_correct);
+    }
+
+
     render()
     {
         return (
@@ -31,13 +36,13 @@ export class Question extends Component
 
                 <div><h2>Question: {this.props.question.question}</h2></div>
 
-                <div><p>A) <button ><h2>{this.props.question.correct_answer}</h2></button></p></div>
+                <div><p>A) <button onClick={this.answer_question(this.props.answers[0].correct)}><h2>{this.props.answers[0].text}</h2></button></p></div>
 
-                <div><p>B) <button ><h2>{this.props.question.incorrect_answers[ 0 ]}</h2></button></p></div>
+                <div><p>B) <button onClick="{this.wrong}"><h2>{this.props.answers[ 1 ].correct}</h2></button></p></div>
 
-                <div><p>C) <button ><h2>{this.props.question.incorrect_answers[ 1 ]}</h2></button></p></div>
+                <div><p>C) <button onClick="{this.wrong}"><h2>{this.props.answers[ 2 ].correct}</h2></button></p></div>
 
-                <div><p>D) <button ><h2>{this.props.question.incorrect_answers[ 2 ]}</h2></button></p></div>
+                <div><p>D) <button ><h2>{this.props.answers[ 3 ]}</h2></button></p></div>
             </div>
 
         )
