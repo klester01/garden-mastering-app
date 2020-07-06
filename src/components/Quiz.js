@@ -29,7 +29,25 @@ class Quiz extends Component
       .then((response) =>
       {
         this.setState({
-          question: response.data.results
+          question: response.data.results,
+          answers: [
+            {
+              text: response.data.correct_answer,
+              correct: true 
+            },
+            {
+              text: response.data.results[0].incorrect_answers[0],
+              correct: false
+            },
+            {
+              text: response.data.results[0].incorrect_answers[1],
+              correct: false
+            },
+            {
+              text: response.data.results[0].incorrect_answers[2],
+              correct: false
+            },
+          ]
         })
       })
       .catch(error =>
@@ -41,14 +59,14 @@ class Quiz extends Component
   {
     const qca = this.state.question.map((question, index) =>
     {
-      return <Question question={question} />
+      return <Question question={question} answers={question.answers} />
     })
 
     //const { incorrect_answers } = this.state.question;
 
     const { incorrect_answers } = this.state.question.map((question) =>
     {
-      return <Question question={question} />
+      return <Question question={question} answers={question.answers}/>
     })
 
 
