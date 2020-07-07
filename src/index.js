@@ -13,20 +13,12 @@ const initialState = {
   players: [
     {
       name: 'Test',
-      class: 'Mage'
-    },
-    {
-      name: 'Test2',
-      class: 'Warrior'
-    }
-  ],
-  inventory: [
-    {
-      count: 100,
-      type: 'potion'
     }
   ]
 }
+
+//need to create a function in the parent component that we can refer to in our child component (this.props.updateScore(payload action))
+
 
 const reducer = (state = initialState, action) => {
   switch(action.type){
