@@ -5,7 +5,7 @@ class Timer extends Component
     {
         super(props)
         this.state = {
-            count: 60
+            count: 600
         }
     }
     render()
