@@ -6,9 +6,10 @@ export class Question extends Component
     answer_question = (is_correct) => {
 
 
-        if (is_correct === this.props.question.correct_answer){
+            if (is_correct === this.props.question.correct_answer){
             alert ('Correct!')
             this.props.win();
+
             //add points to score 
             //run next question
         } else {
@@ -51,7 +52,8 @@ export class Question extends Component
 
 const mapStateToProps = (state) => {
     return {
-        score: state.score
+        score: state.score,
+        counter: state.counter
     }
 }
 
@@ -59,11 +61,11 @@ const mapDispatchToProps = (dispatch) => {
     return {
         win: () => {
             // we need to dispatch 'YOU_WIN'
-            return dispatch({type: 'YOU_WIN', payload: {points: 100}});
+            return dispatch({type: 'YOU_WIN', payload: {points: 100, counter:1}});
         },
         lose: () => {
             // we need to dispatch 'YOU_LOSE'
-            return dispatch({type: 'YOU_LOSE', payload: {points: 50}});
+            return dispatch({type: 'YOU_LOSE', payload: {points: 50, counter:1}});
 
         }
     }

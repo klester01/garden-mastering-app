@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Welcome.css';
-import Garden from './Garden'
+// import Garden from './Garden'
 // import { Link } from 'react-router';
 // import { Switch, Route } from 'react-router-dom';
 
