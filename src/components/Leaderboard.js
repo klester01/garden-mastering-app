@@ -6,7 +6,6 @@ export class Leaderboard extends Component {
     render() {
         return (
             <div>
-                <h1>Gameboard</h1>
                 <span>{this.props.players[0].name}: {this.props.score}</span><br />
             </div>
         )

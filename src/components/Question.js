@@ -31,19 +31,20 @@ export class Question extends Component
                 
                 <div><h2>{this.props.question.category}</h2></div>
 
-                <div><h2>Question: {this.props.question.question}</h2></div>
-
-                {newArray.map(answer =>{
-                if(answer === this.props.question.correct_answer){
-                return (
-                    <div><p> <button onClick={() => this.answer_question(answer)}><h2>{answer}</h2></button></p></div>
-                )
-                }
-                return (
-                    <div><p> <button onClick={() => this.answer_question(answer)}><h2>{answer}</h2></button></p></div>
-                )
-                })}
-
+                <div><h2 className='question'>{this.props.question.question}</h2></div>
+                
+                <div>
+                    {newArray.map(answer =>{
+                    if(answer === this.props.question.correct_answer){
+                    return (
+                        <div><p className='answers'> <button onClick={() => this.answer_question(answer)}><h2>{answer}</h2></button></p></div>
+                    )
+                    }
+                    return (
+                        <div><p className='answers'> <button onClick={() => this.answer_question(answer)}><h2>{answer}</h2></button></p></div>
+                    )
+                    })}
+                </div>
             </div>
 
         )

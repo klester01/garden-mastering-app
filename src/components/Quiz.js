@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Question from './Question'
+import Timer from './Timer';
 
 
 // nextQuestionHandler= () => {
@@ -66,9 +67,11 @@ class Quiz extends Component
     //const { incorrect_answers } = this.state.question;
 
     const { incorrect_answers } = this.state.question.map((question) =>
-    {
+    {      
       return <Question question={question} answers={question.answers} />
-    })
+    }
+    
+    )
 
 
     return (
@@ -77,6 +80,7 @@ class Quiz extends Component
         <div className="Garden">  {/* // this.results[0].incorrect_answers[0] */}
           {/*  <p>{this.props.question}</p> */}
           <p>{qca}</p>
+          <Timer />
           <p>{incorrect_answers}</p>
         </div>
       </div>
