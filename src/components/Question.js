@@ -16,6 +16,7 @@ export class Question extends Component
             this.props.lose();
             //run next question
         }
+
     }
 
 
@@ -41,6 +42,7 @@ export class Question extends Component
                     <div><p> <button onClick={() => this.answer_question(answer)}><h2>{answer}</h2></button></p></div>
                 )
                 })}
+
             </div>
 
         )
