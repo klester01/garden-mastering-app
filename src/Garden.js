@@ -1,6 +1,6 @@
 import React from 'react';
 import './Garden.css';
-// import Timer from './components/Timer';
+import Timer from './components/Timer';
 import Quiz from './components/Quiz'
 import ScoreBoard from './components/ScoreBoard';
 import Leaderboard from './components/Leaderboard';
@@ -22,6 +22,7 @@ function Garden()
                     {/* <div><Timer /></div> */}
 
                     <Quiz />
+                    <Timer />
                     <Leaderboard />
                     <ScoreBoard />
 
