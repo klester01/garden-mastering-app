@@ -3,17 +3,17 @@ import { connect } from 'react-redux'
 
 export class Question extends Component
 {   
-    answer_question(is_correct){
+    answer_question = (is_correct) => {
 
-        
 
         if (is_correct === this.props.question.correct_answer){
             alert ('Correct!')
+            this.props.win();
             //add points to score 
             //run next question
         } else {
             alert ('Incorrect')
-
+            this.props.lose();
             //run next question
         }
 
@@ -49,6 +49,26 @@ export class Question extends Component
     }
 }
 
-export default Question;
+const mapStateToProps = (state) => {
+    return {
+        score: state.score
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        win: () => {
+            // we need to dispatch 'YOU_WIN'
+            return dispatch({type: 'YOU_WIN', payload: {points: 100}});
+        },
+        lose: () => {
+            // we need to dispatch 'YOU_LOSE'
+            return dispatch({type: 'YOU_LOSE', payload: {points: 50}});
+
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Question)
 
 

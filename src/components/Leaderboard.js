@@ -7,8 +7,7 @@ export class Leaderboard extends Component {
         return (
             <div>
                 <h1>Gameboard</h1>
-                <span>{this.props.score}</span><br />
-                <span>Player 1: {this.props.name}</span><br />
+                <span>{this.props.players[0].name}: {this.props.score}</span><br />
             </div>
         )
     }
@@ -17,7 +16,9 @@ export class Leaderboard extends Component {
 // makes this.props.score available for use above
 const mapStateToProps = (state) => {
     return {
-        score: state.score
+        ...state,
+        // score: state.score,
+        // name: state.players[0].name
     }
 }
 

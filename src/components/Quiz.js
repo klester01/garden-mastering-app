@@ -78,7 +78,6 @@ class Quiz extends Component
           {/*  <p>{this.props.question}</p> */}
           <p>{qca}</p>
           <p>{incorrect_answers}</p>
-          <button onClick={this.nextQuestionHandler}>Submit</button>
         </div>
       </div>
     );

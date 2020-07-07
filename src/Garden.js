@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Garden.css';
 import Timer from './components/Timer';
 import Quiz from './components/Quiz'
