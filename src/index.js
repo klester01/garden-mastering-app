@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Welcome from './Welcome';
-// import Garden from './Garden'
+import Garden from './Garden';
 import './index.css';
 // import Usercheck from './components/Usercheck';
 import * as serviceWorker from './serviceWorker';
@@ -64,7 +63,7 @@ ReactDOM.render(
               <Route exact path="/garden" component={Garden}/>
               <Route exact path="/" component={Welcome}/>
           </Switch>
-    </Router>  
+    </Router> 
 
     </Provider>
   </React.StrictMode>,

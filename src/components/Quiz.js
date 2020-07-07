@@ -92,7 +92,6 @@ class Quiz extends Component
         <div className="Garden">  {/* // this.results[0].incorrect_answers[0] */}
           {/*  <p>{this.props.question}</p> */}
           <p>{qca}</p>
-          <Timer />
           <p>{incorrect_answers}</p>
           <button
             onClick={this.nextQuestionHandler}>Next</button>
