@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Garden from './Garden';
+import Welcome from './Welcome';
+// import Garden from './Garden'
 import './index.css';
 // import Usercheck from './components/Usercheck';
 import * as serviceWorker from './serviceWorker';
@@ -16,10 +17,11 @@ import {
 
 // Setup a redux store
 const initialState = {
+  counter: 0,
   score: 0,
   players: [
     {
-      name: 'Test',
+      name: 'Bob',
     }
   ]
 }
@@ -32,12 +34,14 @@ const reducer = (state = initialState, action) => {
     case 'YOU_WIN':
       return {
         ...state,
-        score: state.score + action.payload.points
+        score: state.score + action.payload.points,
+        counter: state.counter + action.payload.counter
       }
     case 'YOU_LOSE':
       return {
         ...state,
-        score: state.score - action.payload.points
+        score: state.score - action.payload.points,
+        counter: state.counter + action.payload.counter
       }
     default:
       return state;  
@@ -61,6 +65,7 @@ ReactDOM.render(
               <Route exact path="/" component={Welcome}/>
           </Switch>
     </Router>  
+
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

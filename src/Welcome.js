@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Welcome.css';
-import Garden from './Garden'
+import {Redirect} from 'react-router-dom';
+// import Garden from './Garden'
 // import { Link } from 'react-router';
 // import { Switch, Route } from 'react-router-dom';
 import {
@@ -12,9 +13,15 @@ import {
 
 
 
+    function game(){
+        return  <Redirect  to="./Garden" />
+    }
 
-function Welcome()
-{
+
+function Welcome() {
+
+
+
     return (
           <div className="Welcome">
             <header className="Welcome-header">
@@ -24,14 +31,15 @@ function Welcome()
                     <h4 className="content-text">Are you ready to test your knowledge?</h4>
 
                     <div id='username'>
-                        <form onSubmit>
+                        <form>
                             <label id='username-input'>Username: </label>
                             <input type='text' id='fname' name='fname'></input>
-                            <input type="submit" id='submit-btn' value="Submit"></input>
+                            <button onClick={() => <Redirect  to="./Garden" />}>Login</button>
                         </form>
                     </div>
 
                     <div id='start-game-btn'>
+
                         <div class="box-1">
                             
                                 <div>
@@ -42,6 +50,7 @@ function Welcome()
                                     </nav>
                                 </div>
                             
+
                         </div>
                     </div>
                 </div>

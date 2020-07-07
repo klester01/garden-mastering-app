@@ -1,6 +1,6 @@
 import React from 'react';
 import './Garden.css';
-import Timer from './components/Timer';
+// import Timer from './components/Timer';
 import Quiz from './components/Quiz'
 import ScoreBoard from './components/ScoreBoard';
 import Leaderboard from './components/Leaderboard';
@@ -19,13 +19,11 @@ function Garden()
             <header className="Garden-header">
                 {/* <img src={logo} className="Garden-logo" alt="trivia" /> */}
                 <div id="bungee">
+                    {/* <div><Timer /></div> */}
 
-                    {/* <p>Welcome to Science and Nature Trivia App!!</p>
-                    <p>Are you ready to test your knowledge?</p> */}
+                    <Quiz />
                     <Leaderboard />
                     <ScoreBoard />
-                    <Timer />
-                    <Quiz />
 
                 </div>
 

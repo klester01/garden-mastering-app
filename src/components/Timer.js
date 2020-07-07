@@ -13,7 +13,7 @@ class Timer extends Component
         const { count } = this.state
         return (
             <div>
-                <h1 id='timer'>Time Remaining: {count}: secs </h1>
+                <h1 id='timer'>Time: {count} seconds </h1>
             </div>
         )
     }
@@ -29,7 +29,7 @@ class Timer extends Component
             this.setState({
                 count: startCount
             }) */
-            if (this.state.count < 0)
+            if (this.state.count < 1)
             {
                 clearInterval(this.myInterval);
                 document.getElementById("timer").innerHTML = "Time is up!";
