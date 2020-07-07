@@ -47,6 +47,7 @@ export class Question extends Component
 
                 <div><h2>{this.props.question.category}</h2></div>
 
+
                 <div><h2>Question: {this.props.question.question}</h2></div>
 
                 {newArray.map(answer =>

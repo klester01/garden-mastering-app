@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Welcome from './Welcome';
-import Garden from './Garden'
+import Welcome from './Welcome';
+// import Garden from './Garden'
 import './index.css';
 // import Usercheck from './components/Usercheck';
 import * as serviceWorker from './serviceWorker';
@@ -52,7 +52,8 @@ ReactDOM.render(
     {/* <Router> */}
     {/* <Usercheck /> */}
     <Provider store={store}>
-    <Garden />
+    <Welcome />
+    {/* <Garden /> */}
     </Provider>
 
     {/* </Router> */}
