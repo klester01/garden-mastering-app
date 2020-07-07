@@ -3,13 +3,20 @@ import './Welcome.css';
 import Garden from './Garden'
 // import { Link } from 'react-router';
 // import { Switch, Route } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";   
+
 
 
 
 function Welcome()
 {
     return (
-        <div className="Welcome">
+          <div className="Welcome">
             <header className="Welcome-header">
                 <div id="content">
 
@@ -26,17 +33,22 @@ function Welcome()
 
                     <div id='start-game-btn'>
                         <div class="box-1">
-                            <div class="btn btn-one">
-                                {/* <span>{<Garden />}</span>
-                                <Link to="/Garden">Start</Link> */}
-
-                            </div>
+                            
+                                <div>
+                                    <nav>
+                                        <Link to="/garden">
+                                            Start Game
+                                        </Link>
+                                    </nav>
+                                </div>
+                            
                         </div>
                     </div>
                 </div>
 
             </header>
         </div>
+                            
     );
 }
 export default Welcome;
