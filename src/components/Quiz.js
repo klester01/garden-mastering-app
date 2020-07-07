@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Question from './Question'
-import Timer from './Timer';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 
 // nextQuestionHandler= () => {
@@ -55,10 +62,12 @@ class Quiz extends Component
         console.log(error);
       });
   }
+
   componentDidMount()
   {
     this.getQuestion()
   }
+
   render()
   {
 
@@ -76,6 +85,7 @@ class Quiz extends Component
     })
 
 
+
     return (
 
       <div>
@@ -84,6 +94,8 @@ class Quiz extends Component
           <p>{qca}</p>
           <Timer />
           <p>{incorrect_answers}</p>
+          <button
+            onClick={this.nextQuestionHandler}>Next</button>
         </div>
       </div>
     );

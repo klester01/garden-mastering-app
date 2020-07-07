@@ -7,6 +7,13 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import Welcome from './Welcome'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";   
 
 // Setup a redux store
 const initialState = {
@@ -48,15 +55,18 @@ const store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>
-
-    {/* <Router> */}
-    {/* <Usercheck /> */}
     <Provider store={store}>
-    <Welcome />
-    {/* <Garden /> */}
-    </Provider>
+    <Router> 
+    {/* <Usercheck /> */}
+    
+    
+          <Switch>
+              <Route exact path="/garden" component={Garden}/>
+              <Route exact path="/" component={Welcome}/>
+          </Switch>
+    </Router>  
 
-    {/* </Router> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

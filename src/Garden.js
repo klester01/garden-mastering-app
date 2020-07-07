@@ -4,6 +4,13 @@ import './Garden.css';
 import Quiz from './components/Quiz'
 import ScoreBoard from './components/ScoreBoard';
 import Leaderboard from './components/Leaderboard';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 
 function Garden()
 {
@@ -24,6 +31,10 @@ function Garden()
         </div>
     );
 }
+
+
+      
+              
 
 
 export default Garden;
