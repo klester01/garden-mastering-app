@@ -57,6 +57,7 @@ class Quiz extends Component
   }
   render()
   {
+
     const qca = this.state.question.map((question, index) =>
     {
       return <Question question={question} answers={question.answers} />
